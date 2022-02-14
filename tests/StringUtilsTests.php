@@ -2,6 +2,10 @@
 
 namespace StringUtils\Tests;
 
+use Webmozart\Assert\Assert;
+
+use function StringUtils\capitalize;
+
 $autoloadPath1 = __DIR__ . '/../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
 
@@ -11,12 +15,8 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function StringUtils\capitalize;
 
-if (capitalize('') !== '') {
-    throw new \Exception('Функция работает неверно!');
-}
 
-if (capitalize('hello') !== 'Hello') {
-        throw new \Exception('Функция работает неверно!');
-}
+Assert::eq(capitalize(''), '');
+
+Assert::eq(capitalize('hello'), 'Hello');

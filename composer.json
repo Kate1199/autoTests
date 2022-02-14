@@ -7,7 +7,9 @@
             "email": "kate.kisel99@yandex.by"
         }
     ],
-    "require": {},
+    "require": {
+        "webmozart/assert": "^1.10"
+    },
     "autoload": {
         "files": [
             "src/StringUtils.php"
