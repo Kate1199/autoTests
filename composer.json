@@ -1,0 +1,16 @@
+{
+    "name": "katek/auto-tests",
+    "description": "ds",
+    "authors": [
+        {
+            "name": "Kate1199",
+            "email": "kate.kisel99@yandex.by"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": [
+            "src/StringUtils.php"
+        ]
+    }
+}
